@@ -1,0 +1,16 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: service-cms
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+
+#        开去hystrix
+
+feign:
+  circuitbreaker:
+    enabled: true

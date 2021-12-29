@@ -1,0 +1,25 @@
+spring:
+  redis:
+    host: 192.168.164.131
+    port: 6379
+    password: haohaoxue123
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 500
+        min-idle: 0
+    lettuce:
+      shutdown-timeout: 10
+wx:
+  open:
+    # 微信开放平台 appid
+    appid: wxed9954c01bb89b47
+
+    # 微信开放平台 appsecret
+    appsecret: a7482517235173ddb4083788de60b90e
+
+    # 微信开放平台 重定向url（guli.shop需要在微信开放平台配置）
+    redirecturl: http://localhost:8160/api/ucenter/wx/callback
+server:
+  port: 8160
