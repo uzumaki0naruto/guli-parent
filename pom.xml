@@ -10,6 +10,7 @@
         <module>service/service_oss</module>
         <module>service/service-order</module>
         <module>infrastructure</module>
+
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

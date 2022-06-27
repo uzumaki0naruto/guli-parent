@@ -1,6 +1,6 @@
 package com.atguigu.commontuils;
 
-public interface ResultCode {
+public interface  ResultCode {
 
     public static Integer SUCCESS=20000;
 

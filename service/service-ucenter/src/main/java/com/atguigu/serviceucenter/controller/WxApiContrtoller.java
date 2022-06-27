@@ -91,7 +91,6 @@ public class WxApiContrtoller {
                 "&scope=snsapi_login" +
                 "&state=%s" +
                 "#wechat_redirect";
-
         String redirectUrl=WXUtils.REDIRECTURL;
         try {
             redirectUrl = URLEncoder.encode(redirectUrl, "utf-8");

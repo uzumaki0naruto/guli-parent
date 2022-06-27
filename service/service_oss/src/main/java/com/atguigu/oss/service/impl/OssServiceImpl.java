@@ -36,7 +36,6 @@ public class OssServiceImpl implements OssService {
         String dataPath = new DateTime().toString("yyyy/MM/dd");
         String fileName=dataPath+"/"+uuid+originalFilename;
 
-
 // 创建OSSClient实例。
         OSS ossClient = new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
 

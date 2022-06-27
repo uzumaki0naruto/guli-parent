@@ -23,7 +23,6 @@ public class SubjectExcelListener extends AnalysisEventListener<SubjectData> {
         if(subjectData == null) {
             throw new guliException(20001,"文件数据为空");
         }
-
         //一行一行读取，每次读取有两个值，第一个值一级分类，第二个值二级分类
         //判断一级分类是否重复
         EduSubject existOneSubject = this.existOneSubject(subjectService, subjectData.getOneSubjectName());
@@ -33,10 +32,8 @@ public class SubjectExcelListener extends AnalysisEventListener<SubjectData> {
             existOneSubject.setTitle(subjectData.getOneSubjectName());//一级分类名称
             subjectService.save(existOneSubject);
         }
-
         //获取一级分类id值
         String pid = existOneSubject.getId();
-
         //添加二级分类
         //判断二级分类是否重复
         EduSubject existTwoSubject = this.existTwoSubject(subjectService, subjectData.getTwoSubjectName(), pid);

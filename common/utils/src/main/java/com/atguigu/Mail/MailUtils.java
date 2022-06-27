@@ -35,7 +35,7 @@ public class MailUtils {
 //        props.setProperty("mail.transport.protocol", "smtp");
                 //QQ邮箱需要下面这段代码，163邮箱不需要
                 MailSSLSocketFactory sf = new MailSSLSocketFactory();
-                sf.setTrustAllHosts(true);
+                 sf.setTrustAllHosts(true);
                 properties.put("mail.smtp.ssl.enable", "true");
                 properties.put("mail.smtp.ssl.socketFactory", sf);
 

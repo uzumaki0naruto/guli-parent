@@ -12,10 +12,10 @@ import lombok.NoArgsConstructor;
 public class guliException extends RuntimeException{
 
 
-@ApiModelProperty("状态码")
-    private Integer code;
+    @ApiModelProperty("状态码")
+        private Integer code;
 
-@ApiModelProperty("异常信息")
-    private String msg;
+    @ApiModelProperty("异常信息")
+        private String msg;
 
 }

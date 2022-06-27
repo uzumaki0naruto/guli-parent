@@ -51,26 +51,21 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
         if(!MD5.encrypt(password).equals(member1.getPassword())) {
             throw new guliException(20001,"密码错误登录失败");
         }
-
 //        判断用户是否禁用
         if(member1.getIsDeleted()){
             throw new guliException(20001,"账号有问题,登入失败.");
         }
         String jwtToken = jwtUtils.getJwtToken(member1.getId(), member.getNickname());
-
-
         return jwtToken;
     }
 
-    /*
-根据id获取信息
-  */
+        /*
+        根据id获取信息
+      */
         @Override
         public LoginInfoVo getLoginInfo(String memberId) {
-
             UcenterMember member = this.getById(memberId);
             LoginInfoVo loginInfoVo = new LoginInfoVo();
-
             return null;
         }
 
@@ -84,7 +79,6 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
 
     @Override
     public int countRegister(String day) {
-
         return baseMapper.countRegister(day);
     }
 
@@ -94,8 +88,6 @@ public class UcenterMemberServiceImpl extends ServiceImpl<UcenterMemberMapper, U
     */
     @Override
     public void regist(String nickname,String password,String email,String code) {
-
-
             UcenterMember ucenterMember = new UcenterMember();
             ucenterMember.setNickname(nickname);
 //          ucenterMember.setPassword(password);

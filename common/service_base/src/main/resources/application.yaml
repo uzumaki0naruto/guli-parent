@@ -13,7 +13,7 @@
 #      shutdown-timeout: 0
 spring:
   redis:
-    host: 192.168.164.131
+    host: 192.168.164.132
     port: 6379
     password: haohaoxue123
     jedis:

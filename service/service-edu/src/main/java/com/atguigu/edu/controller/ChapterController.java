@@ -42,29 +42,24 @@ public class ChapterController {
 
     @PostMapping("/getChapterVideo/{courseId}")
     public R GetChapterVideo(@PathVariable String courseId){
-
        List<chapterVo> list=  chapterService.getChapterVideo(courseId);
         return R.ok().data("chapterList",list);
     }
 
     @PostMapping("/addChapter")
     public R addChapter(@RequestBody Chapter chapter){
-        System.out.println("tianjia");
         chapterService.save(chapter);
         return  R.ok();
     }
 
     @GetMapping("/getChapter/{chapterId}")
     public R getChapterById(@PathVariable String chapterId){
-        System.out.println("get");
         Chapter chapter = chapterService.getById(chapterId);
         return R.ok().data("chapter",chapter);
-
     }
 
     @PostMapping("/updateChapter")
     public R  updateChapter(@RequestBody Chapter chapter){
-
 
      chapterService.updateById(chapter);
      return R.ok();
@@ -73,11 +68,9 @@ public class ChapterController {
 
     @PostMapping("/deleteChapter/{chapterId}")
     public R deleteChapterById(@PathVariable String chapterId){
-
         QueryWrapper<Video> wrapper = new QueryWrapper<Video>();
         wrapper.eq("chapter_id",chapterId);
         wrapper.select("video_source_id");
-
         List<Video> videoList = videoService.list(wrapper);
         List<String> videoIdList = new ArrayList<>();
         for (Video video : videoList) {

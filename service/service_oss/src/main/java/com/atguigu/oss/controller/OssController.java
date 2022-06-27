@@ -20,16 +20,11 @@ import java.io.IOException;
 public class OssController {
 
     @Autowired
-   private OssService ossService;
+     private OssService ossService;
 
     @PostMapping("/upload")
     public R uploadOssFile(MultipartFile file) throws IOException {
      String url=  ossService.uploadFileAvatar(file);
      return R.ok().data("url",url);
     }
-
-
-
-
-
 }

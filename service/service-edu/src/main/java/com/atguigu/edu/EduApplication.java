@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 @SpringBootApplication
 public class EduApplication {
     public static void main(String[] args) {
-
         SpringApplication.run(EduApplication.class,args);
     }
 }

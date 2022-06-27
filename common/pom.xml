@@ -14,7 +14,8 @@
     <modules>
         <module>service_base</module>
         <module>utils</module>
-        <module>security</module>
+        <module>spring_copy</module>
+        <module>spring_security</module>
     </modules>
 
     <properties>
