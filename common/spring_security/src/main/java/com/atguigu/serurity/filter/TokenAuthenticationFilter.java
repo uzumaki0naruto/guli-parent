@@ -45,8 +45,8 @@ public class TokenAuthenticationFilter extends BasicAuthenticationFilter {
     @Override
     protected void doFilterInternal(HttpServletRequest req, HttpServletResponse res, FilterChain chain)
             throws IOException, ServletException {
-        log.info("dofilter"+req.getRequestURI()+"==");
-        log.info(""+req.getHeader("Accept"));
+        log.info("dofilter"+req.getRequestURI());
+        log.info("test");
         if(req.getRequestURI().indexOf("admin") == -1) {
             log.info("是超级管理员就直接放行");
             chain.doFilter(req, res);
