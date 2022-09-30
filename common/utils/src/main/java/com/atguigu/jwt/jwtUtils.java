@@ -5,7 +5,6 @@ import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.apache.commons.lang3.StringUtils;
-
 import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
@@ -17,16 +16,18 @@ public class jwtUtils {
 
     public static String getJwtToken(String id, String nickname){
 
+
+
         String JwtToken = Jwts.builder()
                 .setHeaderParam("typ", "JWT")  //设置token头信息
                 .setHeaderParam("alg", "HS256") //设置token头信息
 
-                .setSubject("guli-user") //设置过期时间
-                .setIssuedAt(new Date())//设置过期时间
+                .setSubject("guli-user") //设置主题，也就是jwt所有者
+                .setIssuedAt(new Date())//设置签发时间
                 .setExpiration(new Date(System.currentTimeMillis() + EXPIRE))//设置过期时间
 
-                .claim("id", id)   //设置token主体部分,存储用户信息
-                .claim("nickname", nickname) //设置token主体部分,存储用户信息
+                .claim("id", id)   //自定义私有字段
+                .claim("nickname", nickname) //自定义私有字段
                 .signWith(SignatureAlgorithm.HS256, APP_SECRET)  //token生成规则
                 .compact();
 
@@ -69,8 +70,7 @@ public class jwtUtils {
     /**
      * 根据token获取会员id
      * @param request
-     * @return
-     */
+      */
     public static String getMemberIdByJwtToken(HttpServletRequest request) {
         String jwtToken = request.getHeader("token");
         System.out.println("Token:"+jwtToken);

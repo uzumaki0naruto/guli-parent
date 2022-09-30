@@ -4,5 +4,4 @@ spring:
   cloud:
     nacos:
       discovery:
-        namespace: EDU_COMMENT
         server-addr: localhost:8848

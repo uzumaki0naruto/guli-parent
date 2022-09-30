@@ -51,11 +51,11 @@ public class TokenLoginFilter extends UsernamePasswordAuthenticationFilter {
 
 //    1. attemptAuthentication(request, response)
 //
-//这是 AbstractAuthenticationProcessingFilter
-// 中的一个抽象方法，包含登录主逻辑，由其子类实现具体的登录验证，
-// 如 UsernamePasswordAuthenticationFilter 是使用表单方式登录的具体实现。
-// 如果是非表单登录的方式，如JNDI等其他方式登录的可以通过继承 AbstractAuthenticationProcessingFilter 自定义登录实现。
-// UsernamePasswordAuthenticationFilter 的登录实现逻辑如下。
+    //这是 AbstractAuthenticationProcessingFilter
+    // 中的一个抽象方法，包含登录主逻辑，由其子类实现具体的登录验证，
+    // 如 UsernamePasswordAuthenticationFilter 是使用表单方式登录的具体实现。
+    // 如果是非表单登录的方式，如JNDI等其他方式登录的可以通过继承 AbstractAuthenticationProcessingFilter 自定义登录实现。
+    // UsernamePasswordAuthenticationFilter 的登录实现逻辑如下。
     @Override
     public Authentication attemptAuthentication(HttpServletRequest req, HttpServletResponse res)
             throws AuthenticationException {

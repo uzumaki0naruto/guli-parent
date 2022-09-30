@@ -2,6 +2,7 @@ package com.atguigu.aclservice.service;
 
 import com.atguigu.aclservice.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.stereotype.Service;
 
 /**
  * <p>
@@ -11,6 +12,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author testjava
  * @since 2020-01-12
  */
+@Service
 public interface UserService extends IService<User> {
 
     User getUserByUsername(String username);

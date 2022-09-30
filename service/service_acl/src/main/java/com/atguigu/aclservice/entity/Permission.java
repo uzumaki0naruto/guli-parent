@@ -13,6 +13,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -27,6 +28,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @TableName("acl_permission")
 @ApiModel(value="Permission对象", description="权限")
+@Component
 public class Permission implements Serializable {
 
     private static final long serialVersionUID = 1L;

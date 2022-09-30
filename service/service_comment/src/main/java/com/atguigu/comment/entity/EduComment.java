@@ -28,8 +28,8 @@ public class EduComment implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "讲师ID")
-      @TableId(value = "id", type = IdType.ASSIGN_ID)
+    @ApiModelProperty(value = "ID")
+    @TableId(value = "id", type = IdType.ASSIGN_ID)
     private String id;
 
     @ApiModelProperty(value = "课程id")
@@ -50,31 +50,31 @@ public class EduComment implements Serializable {
     @ApiModelProperty(value = "评论内容")
     private String content;
 
+    //根为0
     @ApiModelProperty(value = "被评论的评论id")
+
     private String fid;
 
     @ApiModelProperty(value = "点赞数")
     private int agreeNumber;
 
-
+    //根为0
     @ApiModelProperty(value = "被评论的用户id")
-    private String Remember;
-
-
+    @TableField(value = "fmember_id")
+    private String fmemberId;
 
     @ApiModelProperty(value = "更新时间")
     @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date gmtModified;
 
+
     @ApiModelProperty(value = "逻辑删除 1（true）已删除， 0（false）未删除")
     @TableLogic
     private Boolean isDeleted;
 
+
     @ApiModelProperty(value = "创建时间")
-      @TableField(fill = FieldFill.INSERT)
+    @TableField(fill = FieldFill.INSERT)
     private Date gmtCreate;
-
-
-
 
 }

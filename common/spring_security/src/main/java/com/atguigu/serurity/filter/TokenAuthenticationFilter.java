@@ -78,7 +78,9 @@ public class TokenAuthenticationFilter extends BasicAuthenticationFilter {
             logger.info("权限列表"+permissionValueList);
             Collection<GrantedAuthority> authorities = new ArrayList<>();
             for(String permissionValue : permissionValueList) {
-                if(StringUtils.isEmpty(permissionValue)) continue;
+                if(StringUtils.isEmpty(permissionValue)){
+                    continue;
+                }
                 SimpleGrantedAuthority authority = new SimpleGrantedAuthority(permissionValue);
                 authorities.add(authority);
             }

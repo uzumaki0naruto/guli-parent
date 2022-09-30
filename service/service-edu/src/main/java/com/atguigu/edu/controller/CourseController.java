@@ -25,7 +25,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/eduservice/course")
-
 public class CourseController {
 
     @Autowired
@@ -57,6 +56,7 @@ public class CourseController {
         CoursePublishVo coursePublishVo = courseService.publishCourseInfo(id);
         return R.ok().data("publishCourse",coursePublishVo);
     }
+
 
     @PostMapping("/publishCourse/{id}")
     public R publishCourse(@PathVariable  String id){

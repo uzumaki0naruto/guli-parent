@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ import java.util.List;
  */
 @Data
 @Slf4j
+@Component
 public class SecurityUser implements UserDetails {
 
     //当前登录用户
@@ -44,7 +46,9 @@ public class SecurityUser implements UserDetails {
         log.info("permissionValue"+permissionValueList);
         for(String permissionValue : permissionValueList) {
 
-            if(StringUtils.isEmpty(permissionValue)) continue;
+            if(StringUtils.isEmpty(permissionValue)){
+                continue;
+            }
             SimpleGrantedAuthority authority = new SimpleGrantedAuthority(permissionValue);
             authorities.add(authority);
         }

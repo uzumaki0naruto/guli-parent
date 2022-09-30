@@ -3,6 +3,7 @@ package com.atguigu.serurity.entity;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
@@ -16,6 +17,7 @@ import java.io.Serializable;
  */
 @Data
 @ApiModel(description = "用户实体类")
+@Component
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;

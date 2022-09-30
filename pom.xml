@@ -4,13 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>service</module>
-        <module>service/service-edu</module>
         <module>common</module>
-        <module>common/service_base</module>
-        <module>service/service_oss</module>
-        <module>service/service-order</module>
         <module>infrastructure</module>
-
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

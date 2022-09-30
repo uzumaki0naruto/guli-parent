@@ -10,6 +10,8 @@ import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.TableField;
 import java.io.Serializable;
+import java.util.List;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -79,8 +81,12 @@ public class Course implements Serializable {
     private Date gmtCreate;
 
     @ApiModelProperty(value = "更新时间")
-      @TableField(fill = FieldFill.INSERT_UPDATE)
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     private Date gmtModified;
+
+
+    @TableField(exist = false)
+    private List<Integer> CommentList;
 
 
 }

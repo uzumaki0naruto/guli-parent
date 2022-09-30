@@ -10,6 +10,8 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -24,6 +26,8 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @TableName("acl_role")
 @ApiModel(value="Role对象", description="")
+@Configuration
+@Component
 public class Role implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -2,6 +2,7 @@ package com.atguigu.aclservice.service;
 
 import com.atguigu.aclservice.entity.Permission;
 import com.baomidou.mybatisplus.extension.service.IService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -13,6 +14,7 @@ import java.util.List;
  * @author testjava
  * @since 2020-01-12
  */
+@Service
 public interface PermissionService extends IService<Permission> {
 
 

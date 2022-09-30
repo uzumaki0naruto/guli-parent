@@ -1,32 +1,30 @@
 package com.atguigu.serviceVod.Service.impl;
 
+
 import com.aliyun.vod.upload.impl.UploadVideoImpl;
 import com.aliyun.vod.upload.req.UploadStreamRequest;
 import com.aliyun.vod.upload.resp.UploadStreamResponse;
 import com.aliyuncs.DefaultAcsClient;
 import com.aliyuncs.exceptions.ClientException;
-import com.aliyuncs.profile.DefaultProfile;
+
 import com.aliyuncs.vod.model.v20170321.DeleteVideoRequest;
 import com.atguigu.exceptionhandler.guliException;
 import com.atguigu.serviceVod.Service.VodService;
 import com.atguigu.serviceVod.Utils.InitVodCilent;
 import com.atguigu.serviceVod.Utils.util;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+
 import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.xml.crypto.Data;
+
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Date;
+
 import java.util.List;
 
 @Service
 public class VodServiceImpl  implements  VodService{
-
-
 
     @Override
     public  void removeMoreAlyVideo(List videoIdList) {

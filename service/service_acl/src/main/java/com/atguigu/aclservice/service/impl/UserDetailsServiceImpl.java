@@ -5,7 +5,6 @@ import com.atguigu.aclservice.entity.User;
 import com.atguigu.aclservice.service.IndexService;
 import com.atguigu.aclservice.service.PermissionService;
 import com.atguigu.aclservice.service.UserService;
-
 import com.atguigu.serurity.entity.SecurityUser;
 
 import lombok.extern.slf4j.Slf4j;

@@ -9,6 +9,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.experimental.Accessors;
+import org.springframework.stereotype.Component;
 
 /**
  * <p>
@@ -23,6 +24,7 @@ import lombok.experimental.Accessors;
 @Accessors(chain = true)
 @TableName("acl_user")
 @ApiModel(value="User对象", description="用户表")
+@Component
 public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
